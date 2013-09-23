@@ -27,7 +27,8 @@
     trickleRate: 0.02,
     trickleSpeed: 800,
     showSpinner: true,
-    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>',
+    target: document.body
   };
 
   /**
@@ -185,7 +186,7 @@
     if (!Settings.showSpinner)
       $el.find('[role="spinner"]').remove();
 
-    $el.appendTo(document.body);
+    $el.appendTo(Settings.target);
 
     return $el;
   };
